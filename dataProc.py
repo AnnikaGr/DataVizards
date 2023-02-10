@@ -13,8 +13,11 @@ print(result)
 result1 = result[result.iloc[:, 0] < -0.2]
 result2= result[result.iloc[:, 0]> 0.2]
 
-sb.heatmap(result1, annot=True, fmt="g", cmap='RdBu_r')
+#sb.heatmap(result1, annot=True, fmt="g", cmap='RdBu_r')
 #sb.heatmap(result2, annot=True, fmt="g", cmap='RdBu_r')
 
 plt.show()
+
+result1.to_csv("ESS10-happy-negCorr-bigger-0.2");
+result2.to_csv("ESS10-happy-posCorr-bigger-0.2");
 
