@@ -44,3 +44,10 @@ npm run build
 ```sh
 npm run lint
 ```
+
+### Firebase Deployment Instructions
+
+```sh
+firebase login --interactive
+firebase deploy
+```
