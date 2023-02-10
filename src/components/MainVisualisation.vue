@@ -60,7 +60,7 @@ export default {
                     }
                     ],
             legend: {
-                show: true},
+                show: false},
             stroke: {
               colors: ['#fff']
             },
