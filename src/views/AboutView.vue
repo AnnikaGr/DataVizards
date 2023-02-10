@@ -1,6 +1,14 @@
 <template>
   <div class="about">
-    <p> The data basis for this visualization is the <a href="https://www.europeansocialsurvey.org/" target="_blank" rel="noopener">European Social Survey</a>.</p>
+    <p>
+      The data basis for this visualization is the
+      <a
+        href="https://www.europeansocialsurvey.org/"
+        target="_blank"
+        rel="noopener"
+        >European Social Survey</a
+      >.
+    </p>
   </div>
 </template>
 
