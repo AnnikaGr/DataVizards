@@ -8,7 +8,7 @@ import HelloWorld from './components/HelloWorld.vue'
   <header>
 
     <div class="wrapper">
-      <HelloWorld msg="Our Amazing Visualization" />
+      <HelloWorld msg="Correlations of Happiness" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>

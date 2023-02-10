@@ -1,5 +1,4 @@
 <template>
-  <h2>Vue.js and D3 Line Chart</h2>
   <div id="my_dataviz"></div>
 </template>
 
@@ -12,7 +11,7 @@ export default {
   name: "MainVisualisation",
   mounted() {
     var options = {
-              series: [14, 23, 21, 17, 15, 10, 12, 17, 21],
+              series: [ 21, 17, 15, 10, 12, 17, 21],
               chart: {
               type: 'polarArea',
             },
