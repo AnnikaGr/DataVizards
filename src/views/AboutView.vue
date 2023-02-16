@@ -27,7 +27,7 @@
     HOW to read the visualization.
     Look at the visualization to gain an overview of the strength of the correlations of different factors and people’s responses about their happiness. A bigger sunray represents a stronger correlation. Hover over the sunray to read the exact correlation value and code of the survey question (to be replaced with the actual details about the questions).
 </p>
-</p>
+
   </div>
 </template>
 
