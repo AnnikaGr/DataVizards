@@ -11,9 +11,13 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@vanillaes/csv": "^3.0.1",
     "apexcharts": "^3.37.0",
     "d3": "^7.8.2",
+    "jquery": "^3.6.3",
+    "jquery-csv": "^1.0.21",
     "p5": "^1.5.0",
+    "requirejs": "^2.3.6",
     "vue": "^3.2.45",
     "vue-plugin-load-script": "^2.1.1",
     "vue-router": "^4.1.6"
