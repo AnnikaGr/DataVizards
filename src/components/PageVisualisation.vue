@@ -30,7 +30,6 @@ export default {
   async mounted() {
 
     let data = await fetchData();
-    console.log(data)
 
     let retrieved_values=[];
     data.forEach(pair => retrieved_values.push(parseFloat(pair.values)))
@@ -50,11 +49,11 @@ export default {
       colors: [
         function ({ value}) {
           if (value < 0.22) {
-            return "#ffca36";
+            return "#fdefb1";
           } else if (value < 0.3) {
             return "#fec44f";
           } else {
-            return "#d95f0e";
+            return "#ea7531";
           }
         },
       ],
@@ -87,6 +86,27 @@ export default {
           },
         },
       ],
+      tooltip: {
+        enabled: true,
+        enabledOnSeries: undefined,
+        shared: true,
+        followCursor: false,
+        intersect: false,
+        inverseOrder: false,
+        custom: undefined,
+        fillSeriesColor: true,
+        theme: false,
+        style: {
+          fontSize: '12px',
+          fontFamily: undefined
+        },
+        onDatasetHover: {
+          highlightDataSeries: false,
+        },
+        marker: {
+          show: true,
+        },
+      }
     };
 
     var chart = new ApexCharts(document.querySelector("#my_dataviz"), options);

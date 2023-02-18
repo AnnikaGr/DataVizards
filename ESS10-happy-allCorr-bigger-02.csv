@@ -1,11 +1,13 @@
 labels,values
 "All things considered, how satisfied are you with your life as a whole nowadays? (0-10, high-satisfied)",0.70709970630172
+Which of the descriptions on this card comes closest to how you feel about your household's income nowadays? (1-4) ,0.33991062045959974
 "On the whole how satisfied are you with the present state of the economy in [Country]?  (0-10, high-satisfied)",0.33128868423049673
 "What do you think overall about the state of education in [Country] nowadays? (0-10, high-satisfied)",0.30875613956939624
 "What do you think overall about the state of health services in [Country] nowadays?  (0-10, high-satisfied)",0.30785232564478304
 "On the whole, how satisfied are you with the way democracy works in [Country]?  (0-10, high-satisfied)",0.2928220658727256
 "On a scale of 0-10 how much do you personally trust each of the following institutions? The police? (0-10, high-trust)",0.29162563858008844
 "people take advantage of you or try to be fair? (0-10, high - fair)",0.28407462823248225
+How is your health in general? (1-5),0.28301152834735566
 "On a scale of 0-10 how much do you personally trust each of the following institutions? [Country]’s parliament? (0-10, high-trust)",0.26871754777070994
 "trust in people (0-10, high - trust)",0.2641731833650158
 "How satisfied are you with the way health services in [Country] coped with the coronavirus pandemic and its consequences? (0-10, high-satisfied)",0.2593365099719439
@@ -13,6 +15,7 @@ labels,values
 "Please indicate to what extent you think each of the following statements applies in [Country]. National elections in [Country] are free and fair. (0-10, high-fair/free)",0.2507385244110111
 "Would you say that most of the time people try to be helpful or that they are mostly looking out for themselves? (0-10, high - helpful)",0.24639442105125345
 "Now thinking about the [Country] government, how satisfied are you with the way it is doing its job?  (0-10, high-satisfied)",0.2432632794324768
+"How safe do you, or would you, feel walking alone in the area you live in after dark? (1-4, high-unsafe)",0.23990493464068988
 "How many people, if any, are there with whom you can discuss intimate and personal matters with? (0-6, 0 = None, 1 =1, 2 = 2, 3 = 3, 4 = 4-6, 5 = 7-9, 6 = 10 or more)",0.23752119369615995
 "How often do you use the internet? (1-5, high - often)",0.23673699407418608
 gvimpc19,0.22794586566091965
@@ -27,6 +30,3 @@ gvimpc19,0.22794586566091965
 "Please indicate to what extent you think this statement applies in [Country]. Key decisions in [Country] are made by the national government rather than the European Union. (0-10, high - applies completely)",0.21702855147447958
 "On a scale of 0-10 how much do you personally trust each of the following institutions? The political parties? (0-10, high-trust)",0.21243591866748937
 "Would you say it is generally bad or good for [country]'s economy that people come to live here from other countries?  (0-10, high - good for the economy)",0.20362450815029232
-"How safe do you, or would you, feel walking alone in the area you live in after dark? (1-4, high-unsafe)",-0.23990493464068988
-How is your health in general? (1-5),-0.28301152834735566
-Which of the descriptions on this card comes closest to how you feel about your household's income nowadays? (1-4) ,-0.33991062045959974

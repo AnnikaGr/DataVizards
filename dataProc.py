@@ -137,6 +137,7 @@ negCorr.index.name = "labels"
 posCorr.index.name = "labels"
 allCorr.index.name = "labels"
 
+allCorr['values'] = allCorr['values'].abs()
 allCorr= allCorr.transpose().rename(columns=question_mapping).transpose()
 allCorr= allCorr.sort_values(by="values", ascending=False )
 
