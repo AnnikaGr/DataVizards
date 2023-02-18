@@ -36,10 +36,10 @@ export default {
     console.log(retrieved_values)
     console.log(retrieved_labels)
 
+    data=[0.23673699407418608, 0.2641731833650158, 0.28407462823248225, 0.24639442105125345, 0.26871754777070994, 0.25592184161545756, 0.29162563858008844, 0.22076998267386777, 0.21243591866748937, 0.70709970630172]
+
     var options = {
-      series: [
-        retrieved_values
-      ],
+      series:  retrieved_values,
       chart: {
         type: "polarArea",
       },
