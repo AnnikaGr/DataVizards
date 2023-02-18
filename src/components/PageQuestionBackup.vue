@@ -23,7 +23,7 @@
 import { csv } from "d3-fetch";
 
 function fetchData() {
-  return csv("/labels_list.csv").then((data) => data);
+  return csv("/ESS10-happy-allCorr-bigger-02.csv").then((data) => data);
 }
 
 export default {
