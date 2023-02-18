@@ -67,17 +67,14 @@ import * as d3 from "d3";
 import { loadScript } from "vue-plugin-load-script";
 import ApexCharts from "apexcharts";
 
-loadScript("/src/js/chart1.js");
-loadScript(
-  "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-);
-loadScript(
-  "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
-);
+
 
 import { csv } from "d3-fetch";
+
+
+const dataSrc = new URL(`@/datasets/labels_list.csv`, import.meta.url).href;
 function fetchData() {
-  return csv("/labels_list.csv").then((data) => data);
+  return csv(dataSrc).then((data) => data);
 }
 
 export default {

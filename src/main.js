@@ -5,6 +5,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
 import "./assets/main.css";
 import ScrollReveal from "scrollreveal";
+import "d3-fetch";
+
 const app = createApp(App);
 
 app.use(router);

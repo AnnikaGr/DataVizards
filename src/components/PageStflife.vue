@@ -5,7 +5,6 @@
         <h3>
           When people are happier, they are more satisfied with life as a whole.
         </h3>
-
       </div>
     </div>
     <div id="Stflife" class="my-auto scrollable col-sm-7 col-xs-12"></div>
@@ -14,11 +13,11 @@
 
 <script>
 import ApexCharts from "apexcharts";
+import { csv } from "https://cdn.skypack.dev/d3-fetch@3";
 
-
-import { csv } from "d3-fetch";
+const dataSrc = new URL(`@/datasets/top5-vs-happy.csv`, import.meta.url).href;
 function fetchData() {
-  return csv("/top5-vs-happy.csv").then((data) => data);
+  return csv(dataSrc).then((data) => data);
 }
 export default {
   name: "PageStflife",
@@ -32,51 +31,49 @@ export default {
     data.forEach((pair) => retrieved_labels.push(pair.Happy));
 
     var options = {
-      series: [{
-        name: "Life Satisfaction Level (0-10)",
-        data: [...retrieved_values]
-      }],
-      colors: ['#ea7531'],
+      series: [
+        {
+          name: "Life Satisfaction Level (0-10)",
+          data: [...retrieved_values],
+        },
+      ],
+      colors: ["#ea7531"],
       chart: {
-
         height: 350,
-        type: 'line',
+        type: "line",
         zoom: {
-          enabled: false
-        }
+          enabled: false,
+        },
       },
       dataLabels: {
-        enabled: true
+        enabled: true,
       },
       stroke: {
-        curve: 'straight'
+        curve: "straight",
       },
       title: {
-        text: 'Average of How satisfied people are with life as a whole (0-10)' ,
-        align: 'left'
+        text: "Average of How satisfied people are with life as a whole (0-10)",
+        align: "left",
       },
       grid: {
         row: {
-          colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
-          opacity: 0.5
+          colors: ["#f3f3f3", "transparent"], // takes an array which will be repeated on columns
+          opacity: 0.5,
         },
       },
       xaxis: {
         categories: [...retrieved_labels],
         title: {
-          text: 'How happy are you? (0-10)'
-        }
+          text: "How happy are you? (0-10)",
+        },
       },
       yaxis: {
         decimalsInFloat: 0,
       },
-
-
     };
 
     var chart = new ApexCharts(document.querySelector("#Stflife"), options);
     chart.render();
-
   },
 };
 </script>
