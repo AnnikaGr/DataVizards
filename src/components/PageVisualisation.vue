@@ -1,13 +1,24 @@
 <template>
-  <div class="page row scrollable">
-    <h2 class="head scrollable col-sm-6 col-xs-12">
-      The strength of the correlations of different factors and people’s
-      responses about their happiness. A bigger sunray represents a stronger
-      correlation. Hover over the sunray to read the exact correlation value and
-      code of the survey question (to be replaced with the actual details about
-      the questions).
-    </h2>
-    <div id="my_dataviz" class="my-auto scrollable col-sm-6 col-xs-12"></div>
+  <div class="vis row scrollable">
+    <div class="head scrollable col-sm-5 col-xs-12">
+      <div class="row">
+        <h3>
+          In 2022, 33352 Europeans were questioned about various factors. This is the correlations of different factors and people’s responses
+          about their happiness. <br />The top 5 factors are: <br /> <br />
+          <b>Life satisfaction level</b><br />
+          <b>Feeling about household income</b><br />
+          <b>Economy satisfaction level</b><br />
+          <b>Education satisfaction level</b><br />
+          <b>Health service satisfaction level</b><br />
+        </h3>
+        <p> <br />
+          A bigger sunray represents a stronger correlation. Hover over the sunray
+          to read the exact correlation value and code of the survey question (to be
+          replaced with the actual details about the questions).
+        </p>
+      </div>
+    </div>
+    <div id="my_dataviz" class="my-auto scrollable col-sm-7 col-xs-12"></div>
   </div>
 </template>
 

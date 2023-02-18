@@ -1,9 +1,9 @@
 <template>
   <div class="container-fluid mx-auto ">
     <PageIntro class="page row scrollable" ></PageIntro>
-    <PageQuestion class="page row scrollable"></PageQuestion>
+    <PageQuestion @valuePass="valueUpdate" class="page-large row scrollable"></PageQuestion>
     <PageVisualisation  class="page row scrollable"></PageVisualisation>
-
+    <PageCompare :selection="updatedValue"></PageCompare>
   </div>
 </template>
 
@@ -12,14 +12,22 @@ import ScrollReveal from "scrollreveal";
 import PageVisualisation from "@/components/PageVisualisation.vue";
 import PageQuestion from "@/components/PageQuestion.vue";
 import PageIntro from "@/components/PageIntro.vue";
+import PageCompare from "@/components/PageCompare.vue";
 export default {
   name: "MainRight",
-  components: { PageIntro, PageQuestion, PageVisualisation },
+  components: { PageCompare, PageIntro, PageQuestion, PageVisualisation },
   data() {
     return {
       currStep: null,
+      updatedValue: [],
     };
   },
+  methods: {
+    valueUpdate(value) {
+      this.updatedValue = [...value];
+      console.log(this.updatedValue);
+    }
+  }
 };
 ScrollReveal().reveal(".scrollable", {
   delay: 500,
@@ -31,6 +39,10 @@ ScrollReveal().reveal(".scrollable", {
 <style>
 .page {
   height: 100vh;
+  min-width: 80vw;
+}
+.large-page {
+  height: 200vh;
   min-width: 80vw;
 }
 .head {
