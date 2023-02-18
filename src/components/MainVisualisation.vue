@@ -42,7 +42,7 @@ export default {
       colors: [
         function ({ value}) {
           if (value < 0.22) {
-            return "#fff7bc";
+            return "#ffca36";
           } else if (value < 0.3) {
             return "#fec44f";
           } else {
