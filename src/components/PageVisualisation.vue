@@ -1,5 +1,12 @@
 <template>
-  <div id="my_dataviz"></div>
+  <h2 class="head scrollable col-sm-6 col-xs-12">
+    The strength of the correlations of different factors and people’s
+    responses about their happiness. A bigger sunray represents a stronger
+    correlation. Hover over the sunray to read the exact correlation value
+    and code of the survey question (to be replaced with the actual details
+    about the questions).
+  </h2>
+  <div id="my_dataviz" class="my-auto scrollable col-sm-6 col-xs-12"></div>
 </template>
 
 <script>
@@ -10,6 +17,8 @@ import $ from 'jquery'
 import { parse } from '@vanillaes/csv'
 
 loadScript("/src/js/chart1.js");
+loadScript("https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js");
+loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js");
 
 import { csv } from "d3-fetch";
     function fetchData() {
@@ -85,6 +94,15 @@ export default {
     chart.render();
   },
 };
+
+
+
+  import ScrollReveal from "scrollreveal";
+  loadScript("https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js");
+  ScrollReveal().reveal(".form", { delay: 5000 });
+  ScrollReveal().reveal('#my_dataviz', { delay: 10000 });
+
+
 </script>
 <style scoped>
 
