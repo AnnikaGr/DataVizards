@@ -25,6 +25,7 @@
               id="gridCheck1"
               :value="item"
               v-model="selected"
+
             />
             <label class="form-check-label" for="gridCheck1">
               {{ item }}
@@ -66,9 +67,14 @@ export default {
       this.$emit("valuePass", this.selected);
     },
     handleSubmit() {
-      this.validated = true;
-      this.scrollToElement();
-      this.passValues();
+      if (this.selected.length!==5) {
+        alert("You need to choose 5 options to submit.");
+      } else {
+        this.validated = true;
+        this.scrollToElement();
+        this.passValues();
+      }
+
     },
     scrollToElement() {
       let element = document.getElementById("my_dataviz");
@@ -89,4 +95,15 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.form-check-input:checked{
+  background-color: black !important;
+  border: 0;
+}
+.form-check-input:focus, .label::after, label.form-check-label:focus, .form-check-input::after, .form-check-input:not(:disabled):not(.disabled):active:focus {
+  color: black;
+  outline: 0;
+  border: 0;
+  box-shadow: 0 0 0 0.1rem black !important;
+}
+</style>
