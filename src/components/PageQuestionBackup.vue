@@ -6,7 +6,7 @@
           Which are the factors that you think related most to happiness?
         </h1>
         <div class="my-auto scrollable col-sm-6 col-xs-12">
-          <div v-for="item in items" class="form-check">
+          <div v-for="item in items" :key="item" class="form-check">
             <input class="form-check-input" type="checkbox" id="gridCheck1" />
             <label class="form-check-label" for="gridCheck1">
               {{ item }}

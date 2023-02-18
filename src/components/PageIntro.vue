@@ -14,6 +14,8 @@
         alt="happy"
       />
     </div>
+    <div class="sticky-bottom">  <a href="#question" class="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
+    </div>
   </div>
 </template>
 <script>
@@ -21,5 +23,3 @@ export default {
   name: "PageIntro",
 };
 </script>
-
-<style scoped></style>

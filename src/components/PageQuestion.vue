@@ -1,10 +1,22 @@
 <template>
-  <div class="page-large row scrollable">
+  <div class="row scrollable" id="question">
     <form class="my-auto">
       <div class="my-auto row">
-        <h1 class="head scrollable col-sm-6 col-xs-12">
-          Which are the 5 factors that you think related most to happiness?
-        </h1>
+        <div class="head scrollable col-sm-6 col-xs-12">
+          <div class="row">
+            <h1>Which are the 5 factors that you think related most to happiness?<br><br></h1>
+            <button
+                type="button"
+                @click="handleSubmit"
+                class="btn btn-lg btn-dark mx-auto"
+                style="max-width: 30%"
+            >Submit
+            </button>
+
+          </div>
+
+        </div>
+
         <div class="my-auto scrollable col-sm-6 col-xs-12">
           <div v-for="item in items" :key="item" class="form-check">
             <input
@@ -18,14 +30,11 @@
               {{ item }}
             </label>
           </div>
+
         </div>
+
       </div>
-      <button
-          type="button"
-        @click="handleSubmit"
-        class="btn btn-lg btn-dark"
-      >Submit
-      </button>
+
     </form>
   </div>
 </template>
