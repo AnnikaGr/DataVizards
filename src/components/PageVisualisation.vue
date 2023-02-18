@@ -13,7 +13,6 @@
 import * as d3 from "d3";
 import { loadScript } from "vue-plugin-load-script";
 import ApexCharts from "apexcharts";
-import $ from 'jquery'
 import { parse } from '@vanillaes/csv'
 
 loadScript("/src/js/chart1.js");
