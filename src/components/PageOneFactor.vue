@@ -44,7 +44,7 @@ export default {
       ],
       top_five_statements: [
         "Happiness positively correlates with life as a whole.",
-        "Happiness positively correlates with feeling about their household income.",
+        "Happiness positively correlates with lower stress about people's household income.",
         "Happiness positively correlates with country's economy.",
         "Happiness positively correlates with country's education.",
         "Happiness positively correlates with country's health services.",
