@@ -19,7 +19,7 @@
         alt="happy"
       />
     </div>
-    <div class="sticky-bottom text-center"> Scroll down to reflect on the topic and learn more about which factors are correlated with people's happiness. <a href="#question" class="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
+    <div class="sticky-bottom text-center"> Are you curious about what factors might contribute to happiness in Europe?  <a href="#question" class="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
     </div>
   </div>
 </template>
