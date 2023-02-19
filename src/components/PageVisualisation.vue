@@ -20,6 +20,7 @@
           </div>
         </h4>
         <!-- Button trigger modal -->
+
         <!-- Modal -->
 
         <div
@@ -84,11 +85,6 @@ function fetchData() {
 export default {
   name: "PageVisualisation",
   components: { PageOneFactor },
-  methods: {
-    buttonPressed(index) {
-      this.factorIndex = index;
-    },
-  },
   data() {
     return {
       factorIndex: 0,
@@ -102,87 +98,108 @@ export default {
     };
   },
   props: ["selection"],
+  methods: {
+    buttonPressed(index) {
+      this.factorIndex = index;
+    },
+      async initChart(){
+        document.querySelector("#my_dataviz").innerHTML = "";
+        console.log("mounted called")
+        let data = await fetchData();
 
-  async mounted() {
-    let data = await fetchData();
+        let retrieved_values = [];
+        data.forEach((pair) => retrieved_values.push(parseFloat(pair.values)));
 
-    let retrieved_values = [];
-    data.forEach((pair) => retrieved_values.push(parseFloat(pair.values)));
+        let retrieved_labels = [];
+        data.forEach((pair) => retrieved_labels.push(pair.labels));
 
-    let retrieved_labels = [];
-    data.forEach((pair) => retrieved_labels.push(pair.labels));
+        let selected_indeces= []
+        this.selection.forEach(selected => selected_indeces.push(retrieved_labels.findIndex(label => label === selected)))
 
-    var options = {
-      series: retrieved_values,
-      labels: retrieved_labels,
-      chart: {
-        type: "polarArea",
-      },
-      colors: [
-        function ({ value }) {
-          if (value < 0.22) {
-            return "#fdefb1";
-          } else if (value < 0.3) {
-            return "#fec44f";
-          } else {
-            return "#ea7531";
-          }
-        },
-      ],
-      yaxis: {
-        show: true,
-        max: 1, // the lowest value that can be set is 1
-        tickAmount: 4,
-      },
+        console.log("selected indices" + selected_indeces)
 
-      legend: {
-        show: false,
-      },
-      stroke: {
-        colors: ["#fff"],
-      },
-      fill: {
-        opacity: 0.8,
-      },
-
-      responsive: [
-        {
-          breakpoint: 480,
-          options: {
-            chart: {
-              width: 600,
+        var options = {
+          series: retrieved_values,
+          labels: retrieved_labels,
+          chart: {
+            type: "polarArea",
+          },
+          colors: [
+            function ({ value,seriesIndex }) {
+              if (selected_indeces.includes(seriesIndex)){
+                return "#ff7e7e";
+              }
+              else if (value < 0.22) {
+                return "#fdefb1";
+              } else if (value < 0.3) {
+                return "#fec44f";
+              } else {
+                return "#ea7531";
+              }
             },
-            legend: {
-              position: "bottom",
+          ],
+          yaxis: {
+            show: true,
+            max: 1, // the lowest value that can be set is 1
+            tickAmount: 4,
+          },
+
+          legend: {
+            show: false,
+          },
+          stroke: {
+            colors: ["#fff"],
+          },
+          fill: {
+            opacity: 0.8,
+          },
+
+          responsive: [
+            {
+              breakpoint: 480,
+              options: {
+                chart: {
+                  width: 600,
+                },
+                legend: {
+                  position: "bottom",
+                },
+              },
+            },
+          ],
+          tooltip: {
+            enabled: true,
+            enabledOnSeries: undefined,
+            shared: true,
+            followCursor: false,
+            intersect: false,
+            inverseOrder: false,
+            custom: undefined,
+            fillSeriesColor: true,
+            theme: false,
+            style: {
+              fontSize: "12px",
+              fontFamily: undefined,
+            },
+            onDatasetHover: {
+              highlightDataSeries: false,
+            },
+            marker: {
+              show: true,
             },
           },
-        },
-      ],
-      tooltip: {
-        enabled: true,
-        enabledOnSeries: undefined,
-        shared: true,
-        followCursor: false,
-        intersect: false,
-        inverseOrder: false,
-        custom: undefined,
-        fillSeriesColor: true,
-        theme: false,
-        style: {
-          fontSize: "12px",
-          fontFamily: undefined,
-        },
-        onDatasetHover: {
-          highlightDataSeries: false,
-        },
-        marker: {
-          show: true,
-        },
-      },
-    };
+        };
 
-    var chart = new ApexCharts(document.querySelector("#my_dataviz"), options);
-    chart.render();
+        var chart = new ApexCharts(document.querySelector("#my_dataviz"), options);
+        chart.render();
+      }
+  },
+  async beforeUpdate(){
+    console.log("beforeUpdate called")
+    this.initChart();
+  },
+  async mounted() {
+    this.initChart()
   },
 };
 
