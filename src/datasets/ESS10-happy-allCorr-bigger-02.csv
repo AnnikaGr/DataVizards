@@ -1,0 +1,32 @@
+question,values,identifier,labels
+"All things considered, how satisfied are you with your life as a whole nowadays? (0-10, high-satisfied)",0.70709970630172,stflife,General life satisfaction
+Which of the descriptions on this card comes closest to how you feel about your household's income nowadays? (1-4) ,0.33991062045959974,hincfel,Feeling about household income
+"On the whole how satisfied are you with the present state of the economy in [Country]?  (0-10, high-satisfied)",0.33128868423049673,stfeco,Satisfaction with country's economy
+"What do you think overall about the state of education in [Country] nowadays? (0-10, high-satisfied)",0.30875613956939624,stfedu,Satisfaction with country's education
+"What do you think overall about the state of health services in [Country] nowadays?  (0-10, high-satisfied)",0.30785232564478304,stfhlth,Satisfaction with country's health services
+"On the whole, how satisfied are you with the way democracy works in [Country]?  (0-10, high-satisfied)",0.2928220658727256,stfdem,Satisfaction with country's democracy
+"On a scale of 0-10 how much do you personally trust each of the following institutions? The police? (0-10, high-trust)",0.29162563858008844,trstplc,Trust in country's police
+"people take advantage of you or try to be fair? (0-10, high - fair)",0.28407462823248225,pplfair,Perception of fairness in people's behavior
+How is your health in general? (1-5),0.28301152834735566,health,Personal health in general
+"On a scale of 0-10 how much do you personally trust each of the following institutions? [Country]’s parliament? (0-10, high-trust)",0.26871754777070994,trstprl,Trust in country's parliament
+"trust in people (0-10, high - trust)",0.2641731833650158,ppltrst,Trust in people
+"How satisfied are you with the way health services in [Country] coped with the coronavirus pandemic and its consequences? (0-10, high-satisfied)",0.2593365099719439,hscopc19,Satisfaction with how country's health services coped with coronavirus pandemic
+"On a scale of 0-10 how much do you personally trust each of the following institutions? The legal system? (0-10, high-trust)",0.25592184161545756,trstlgl,Trust in country's legal system
+"Please indicate to what extent you think each of the following statements applies in [Country]. National elections in [Country] are free and fair. (0-10, high-fair/free)",0.2507385244110111,fairelcc,Perceived fairness in national election
+"Would you say that most of the time people try to be helpful or that they are mostly looking out for themselves? (0-10, high - helpful)",0.24639442105125345,pplhlp,Perception of helpfulness in people's behavior
+"Now thinking about the [Country] government, how satisfied are you with the way it is doing its job?  (0-10, high-satisfied)",0.2432632794324768,stfgov,Satisfaction with national government
+"How safe do you, or would you, feel walking alone in the area you live in after dark? (1-4, high-unsafe)",0.23990493464068988,aesfdrk,Personal safety while walking alone at night
+"How many people, if any, are there with whom you can discuss intimate and personal matters with? (0-6, 0 = None, 1 =1, 2 = 2, 3 = 3, 4 = 4-6, 5 = 7-9, 6 = 10 or more)",0.23752119369615995,inprdsc,Personal comfort in discussing intimate topics in personal relationships
+"How often do you use the internet? (1-5, high - often)",0.23673699407418608,netusoft,Internet usage frequency
+gvimpc19,0.22794586566091965,gvimpc19,Trust in how the government dealt with the impact of coronavirus pandemic
+"Please indicate to what extent you think this statement applies in [Country]. The media in [Country] are free to criticise the government. (0-10, high - applies completely)",0.22781402315464064,medcrgvc,Perception of how free the media is to criticize the government
+"Would you say that [country]'s cultural life is generally undermined or enriched by people coming to live here from other countries? (0-10, high - cultural life enriched)",0.22513102687168332,imueclt,Perception of whether immigration positively impacts country’s cultural life
+"How would you rate the overall experience of taking part in this survey? (0-10, high-positive experience)",0.22273942727401722,vdovexre,Overall rating of survey experience
+"On a scale of 0-10 how much do you personally trust each of the following institutions? The politicians? (0-10, high-trust)",0.22076998267386777,trstplt,Trust in country’s politicians
+"Is [country] made a worse or a better place to live by people coming to live here from other countries?  (0-10, hihg - better place to live)",0.21746120603486516,imwbcnt,Perception of whether immigration positively impacts country's living conditions
+"Overall, how satisfied are you with the [Country] government’s handling of the coronavirus pandemic? (0-10, Extremely satisfied)",0.21730637421127805,gvhanc19,Satisfaction with country's government handling of pandemic
+"How often do you meet socially with friends, relatives or work colleagues? (1-7, high-often)",0.2172566568409694,sclmeet,"Frequency of social meetings with friends, relatives and colleagues"
+"Please indicate to what extent you think this statement applies in [Country]. The courts in [Country] treat everyone the same. (0-10, high- applies completely)",0.21725151772216597,cttresac,Perception of equal treatment in court
+"Please indicate to what extent you think this statement applies in [Country]. Key decisions in [Country] are made by the national government rather than the European Union. (0-10, high - applies completely)",0.21702855147447958,keydecc,Perception importance for democracy that national governments handle key issues rather than EU
+"On a scale of 0-10 how much do you personally trust each of the following institutions? The political parties? (0-10, high-trust)",0.21243591866748937,trstprt,Trust in country’s political parties
+"Would you say it is generally bad or good for [country]'s economy that people come to live here from other countries?  (0-10, high - good for the economy)",0.20362450815029232,imbgeco,Perception of whether immigration positively affects country's economy
