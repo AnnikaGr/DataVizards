@@ -25,10 +25,7 @@
       </h6>
       <h6>
         WHY we the audience should care about it: We aim to raise an awareness about the strength of correlations of a variety of factors in relation to people’s happiness and overall well being. We aim to encourage personal reflection before revealing the data visualization to encourage people to actively think about the topic, reflect on the factors relating to their happiness and potentially reveal misconceptions. Further, it could increase the overall relevancy, understanding and memorability of the data we show them afterwards.
-
       </h6>
-    </div>
-    <div class="sticky-bottom text-center">  Created by Annika Grothaus, Katja Kordes and Xiaohan Peng.
     </div>
   </div>
 </template>
