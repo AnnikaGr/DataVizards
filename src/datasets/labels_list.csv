@@ -1,18 +1,18 @@
 ﻿labels,values
-Life satisfaction level,0.707099706
-Household income feeling,0.33991062
-Economy satisfaction level,0.331288684
-Education satisfaction level,0.30875614
-Health services satisfaction level,0.307852326
-Democracy satisfaction level,0.292822066
-Personal trust level in police institution,0.291625639
-Personal perception of fairness level in people's behavior,0.284074628
+Life satisfaction,0.707099706
+Feeling about household income,0.33991062
+Satisfaction with country's economy,0.331288684
+Satisfaction with country's education,0.30875614
+Satisfaction with country's health services,0.307852326
+Satisfaction with country's democracy,0.292822066
+Personal trust in police,0.291625639
+Personal perception of fairness in people's behavior,0.284074628
 General health status,0.283011528
-Personal trust level in parliament institution,0.268717548
-Personal trust level in people,0.264173183
-Health services satisfaction level in coping with coronavirus pandemic,0.25933651
-Personal trust level in legal system institution,0.255921842
-National election fairness level ,0.250738524
+Personal trust in parliament institution,0.268717548
+Personal trust in people,0.264173183
+Satisfaction with country's health services coping with coronavirus pandemic,0.25933651
+Personal trust in country's legal system,0.255921842
+National election fairness,0.250738524
 Personal perception of helpfulness level in people's behavior,0.246394421
 Government satisfaction level and job performance satisfaction,0.243263279
 Personal safety level while walking alone at night,0.239904935

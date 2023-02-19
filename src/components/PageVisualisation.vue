@@ -7,25 +7,24 @@
           is the correlations of different factors (0-1) and people’s responses
           about their happiness. <br />The top 5 factors are: <br />
           <br />
-          <button
-            type="button"
-            class="btn btn-primary"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-          >
-            Life satisfaction level</button
-          ><br />
-          <b>Feeling about household income</b><br />
-          <b>Economy satisfaction level</b><br />
-          <b>Education satisfaction level</b><br />
-          <b>Health service satisfaction level</b><br />
+          <div v-for="(item, index) in top_five_strings" :key="item">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              :data-bs-target="`#exampleModal`"
+              @click="buttonPressed(index)"
+            >
+              {{ item }}</button
+            ><br />
+          </div>
         </h4>
         <!-- Button trigger modal -->
-
         <!-- Modal -->
+
         <div
           class="modal fade modal-xl"
-          id="exampleModal"
+          :id="`exampleModal`"
           tabindex="-1"
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
@@ -42,7 +41,7 @@
                 ></button>
               </div>
               <div class="modal-body">
-                <PageStflife></PageStflife>
+                <PageOneFactor :key="factorIndex"></PageOneFactor>
               </div>
             </div>
           </div>
@@ -56,8 +55,19 @@
         </p>
       </div>
     </div>
-    <div data-aos="fade-down" data-aos-easing="ease-in" id="my_dataviz" class="my-auto scrollable col-sm-8 col-xs-12"></div>
-    <div class="sticky-bottom">  <a href="#compare" class="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
+    <div
+      data-aos="fade-down"
+      data-aos-easing="ease-in"
+      id="my_dataviz"
+      class="my-auto scrollable col-sm-8 col-xs-12"
+    ></div>
+    <div class="sticky-bottom">
+      <a
+        href="#compare"
+        class="ca3-scroll-down-link ca3-scroll-down-arrow"
+        data-ca3_iconfont="ETmodules"
+        data-ca3_icon=""
+      ></a>
     </div>
   </div>
 </template>
@@ -66,11 +76,8 @@
 import * as d3 from "d3";
 import { loadScript } from "vue-plugin-load-script";
 import ApexCharts from "apexcharts";
-
-
-
+import PageOneFactor from "./PageOneFactor.vue";
 import { csv } from "d3-fetch";
-
 
 const dataSrc = new URL(`@/datasets/labels_list.csv`, import.meta.url).href;
 function fetchData() {
@@ -79,7 +86,24 @@ function fetchData() {
 
 export default {
   name: "PageVisualisation",
-  components: { PageStflife },
+  components: {PageOneFactor },
+  methods: {
+    buttonPressed(index) {
+      this.factorIndex = index;
+    },
+  },
+  data() {
+    return {
+      factorIndex: 0,
+      top_five_strings: [
+        "Life satisfaction level",
+        "Feeling about household income",
+        "Economy satisfaction level",
+        "Education satisfaction level",
+        "Health service satisfaction level",
+      ],
+    };
+  },
   async mounted() {
     let data = await fetchData();
 
@@ -164,7 +188,6 @@ export default {
 };
 
 import ScrollReveal from "scrollreveal";
-import PageStflife from "@/components/PageStflife.vue";
 loadScript("https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js");
 ScrollReveal().reveal(".form", { delay: 5000 });
 ScrollReveal().reveal("#my_dataviz", { delay: 10000 });
