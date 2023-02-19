@@ -43,11 +43,11 @@ export default {
         "Average of how satisfied people are with country's health services (0-10)",
       ],
       top_five_statements: [
-        "When people are happier, they are more satisfied with life as a whole.",
-        "When people are happier, they feel better about their household income.",
-        "When people are happier, they are more satisfied with country's economy.",
-        "When people are happier, they are more satisfied with country's education.",
-        "When people are happier, they are more satisfied with country's health services.",
+        "Happiness positively correlates with life as a whole.",
+        "Happiness positively correlates with feeling about their household income.",
+        "Happiness positively correlates with country's economy.",
+        "Happiness positively correlates with country's education.",
+        "Happiness positively correlates with country's health services.",
       ],
     };
   },
@@ -99,8 +99,14 @@ export default {
           text: "How happy are you? (0-10)",
         },
       },
+      axisTicks: {
+        show: true,
+        offsetX: 0,
+        offsetY: 0,
+      },
       yaxis: {
-        decimalsInFloat: 0,
+        min: 0.0,
+        decimalsInFloat: 3,
       },
     };
 

@@ -34,10 +34,9 @@
         causation. Further research would be needed to determine whether there
         are causal relationships between the chosen factors and happiness.
         Moreover, the data is based on individuals' self-reported answers and
-        might hence be subject to subjectivity and other biases.
+        might hence be subject to subjectivity and other biases.<br><br>
+        Online resource: <a href="https://ess-search.nsd.no/en/study/172ac431-2a06-41df-9dab-c1fd8f3877e7">https://ess-search.nsd.no/en/study/172ac431-2a06-41df-9dab-c1fd8f3877e7</a>
       </p>
-    </div>
-    <div class="sticky-bottom text-center">  Created by Annika Grothaus, Katja Kordes and Xiaohan Peng.
     </div>
   </div>
 </template>

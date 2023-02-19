@@ -92,7 +92,7 @@ export default {
 
 <style scoped>
 .form-check-input:checked {
-  background-color: black !important;
+  background-color: green !important;
   border: 0;
 }
 .form-check-input:focus,

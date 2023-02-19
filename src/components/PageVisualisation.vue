@@ -10,7 +10,7 @@
           <div v-for="(item, index) in top_five_strings" :key="item">
             <button
               type="button"
-              class="btn btn-light bg-transparent "
+              class="btn btn-light bg-transparent"
               data-bs-toggle="modal"
               :data-bs-target="`#exampleModal`"
               @click="buttonPressed(index)"
@@ -62,7 +62,13 @@
       id="my_dataviz"
       class="my-auto scrollable col-sm-8 col-xs-12"
     ></div>
-    <div class="sticky-bottom text-center">  <a href="#about" class="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
+    <div class="sticky-bottom text-center">
+      <a
+        href="#about"
+        class="ca3-scroll-down-link ca3-scroll-down-arrow"
+        data-ca3_iconfont="ETmodules"
+        data-ca3_icon=""
+      ></a>
     </div>
   </div>
 </template>
@@ -102,104 +108,110 @@ export default {
     buttonPressed(index) {
       this.factorIndex = index;
     },
-      async initChart(){
-        document.querySelector("#my_dataviz").innerHTML = "";
-        console.log("mounted called")
-        let data = await fetchData();
+    async initChart() {
+      document.querySelector("#my_dataviz").innerHTML = "";
+      console.log("mounted called");
+      let data = await fetchData();
 
-        let retrieved_values = [];
-        data.forEach((pair) => retrieved_values.push(parseFloat(pair.values)));
+      let retrieved_values = [];
+      data.forEach((pair) => retrieved_values.push(parseFloat(pair.values)));
 
-        let retrieved_labels = [];
-        data.forEach((pair) => retrieved_labels.push(pair.labels));
+      let retrieved_labels = [];
+      data.forEach((pair) => retrieved_labels.push(pair.labels));
 
-        let selected_indeces= []
-        this.selection.forEach(selected => selected_indeces.push(retrieved_labels.findIndex(label => label === selected)))
+      let selected_indeces = [];
+      this.selection.forEach((selected) =>
+        selected_indeces.push(
+          retrieved_labels.findIndex((label) => label === selected)
+        )
+      );
 
-        console.log("selected indices" + selected_indeces)
+      console.log("selected indices" + selected_indeces);
 
-        var options = {
-          series: retrieved_values,
-          labels: retrieved_labels,
-          chart: {
-            type: "polarArea",
+      var options = {
+        series: retrieved_values,
+        labels: retrieved_labels,
+        chart: {
+          type: "polarArea",
+        },
+        colors: [
+          function ({ value, seriesIndex }) {
+            if (selected_indeces.includes(seriesIndex)) {
+              return "#ff7e7e";
+            } else if (value < 0.22) {
+              return "#fdefb1";
+            } else if (value < 0.3) {
+              return "#fec44f";
+            } else {
+              return "#ea7531";
+            }
           },
-          colors: [
-            function ({ value,seriesIndex }) {
-              if (selected_indeces.includes(seriesIndex)){
-                return "#ff7e7e";
-              }
-              else if (value < 0.22) {
-                return "#fdefb1";
-              } else if (value < 0.3) {
-                return "#fec44f";
-              } else {
-                return "#ea7531";
-              }
-            },
-          ],
-          yaxis: {
-            show: true,
-            max: 1, // the lowest value that can be set is 1
-            tickAmount: 4,
-          },
+        ],
+        yaxis: {
+          show: true,
+          max: 1, // the lowest value that can be set is 1
+          tickAmount: 4,
+        },
 
-          legend: {
-            show: false,
-          },
-          stroke: {
-            colors: ["#fff"],
-          },
-          fill: {
-            opacity: 0.8,
-          },
+        legend: {
+          show: false,
+        },
+        stroke: {
+          colors: ["#fff"],
+        },
+        fill: {
+          opacity: 0.8,
+        },
 
-          responsive: [
-            {
-              breakpoint: 480,
-              options: {
-                chart: {
-                  width: 600,
-                },
-                legend: {
-                  position: "bottom",
-                },
+        responsive: [
+          {
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: 600,
+              },
+              legend: {
+                position: "bottom",
               },
             },
-          ],
-          tooltip: {
-            enabled: true,
-            enabledOnSeries: undefined,
-            shared: true,
-            followCursor: false,
-            intersect: false,
-            inverseOrder: false,
-            custom: undefined,
-            fillSeriesColor: true,
-            theme: false,
-            style: {
-              fontSize: "12px",
-              fontFamily: undefined,
-            },
-            onDatasetHover: {
-              highlightDataSeries: false,
-            },
-            marker: {
-              show: true,
-            },
           },
-        };
+        ],
+        tooltip: {
+          enabled: true,
+          enabledOnSeries: undefined,
+          shared: true,
+          followCursor: false,
+          intersect: false,
+          inverseOrder: false,
+          custom: undefined,
+          fillSeriesColor: true,
+          theme: false,
+          style: {
+            fontSize: "12px",
+            fontFamily: undefined,
+          },
+          onDatasetHover: {
+            highlightDataSeries: false,
+          },
+          marker: {
+            show: true,
+          },
+        },
+      };
 
-        var chart = new ApexCharts(document.querySelector("#my_dataviz"), options);
-        chart.render();
-      }
+      var chart = new ApexCharts(
+        document.querySelector("#my_dataviz"),
+        options
+      );
+      chart.render();
+    },
   },
-  async beforeUpdate(){
-    console.log("beforeUpdate called")
+  async beforeUpdate() {
+    console.log("beforeUpdate called");
     this.initChart();
   },
   async mounted() {
-    this.initChart()
+    this.initChart();
   },
 };
 

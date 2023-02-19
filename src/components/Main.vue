@@ -7,6 +7,7 @@
     ></PageQuestion>
     <PageVisualisation class="page row" :selection="updatedValue"></PageVisualisation>
     <PageAbout></PageAbout>
+    <PageAudience></PageAudience>
   </div>
 </template>
 
@@ -20,10 +21,11 @@ import {loadScript} from "vue-plugin-load-script";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import PageAbout from "@/components/PageAbout.vue";
+import PageAudience from "@/components/PageAudience.vue";
 loadScript("https://unpkg.com/aos@2.3.1/dist/aos.js");
 export default {
   name: "MainRight",
-  components: {PageAbout, PageIntro, PageQuestion, PageVisualisation },
+  components: {PageAudience, PageAbout, PageIntro, PageQuestion, PageVisualisation },
   data() {
     return {
       currStep: null,
@@ -62,7 +64,7 @@ ScrollReveal().reveal(".scrollable", {
   min-width: 80vw;
 }
 .large-page {
-  height: 200vh;
+  height: 170vh;
   min-width: 80vw;
 }
 .head {
