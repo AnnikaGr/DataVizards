@@ -13,6 +13,7 @@
   "dependencies": {
     "@popperjs/core": "^2.11.6",
     "@vanillaes/csv": "^3.0.1",
+    "aos": "^2.3.4",
     "apexcharts": "^3.37.0",
     "bootstrap": "^5.2.3",
     "d3": "^7.8.2",

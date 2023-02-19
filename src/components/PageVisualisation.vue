@@ -1,6 +1,6 @@
 <template>
   <div class="row scrollable" id="vis">
-    <div class="head scrollable col-sm-4 col-xs-12">
+    <div data-aos="fade-down" data-aos-easing="ease-in" class="head scrollable col-sm-4 col-xs-12">
       <div class="row">
         <h4>
           In 2022, 33352 Europeans were questioned about various factors. This
@@ -56,7 +56,7 @@
         </p>
       </div>
     </div>
-    <div id="my_dataviz" class="my-auto scrollable col-sm-8 col-xs-12"></div>
+    <div data-aos="fade-down" data-aos-easing="ease-in" id="my_dataviz" class="my-auto scrollable col-sm-8 col-xs-12"></div>
     <div class="sticky-bottom">  <a href="#compare" class="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
     </div>
   </div>
