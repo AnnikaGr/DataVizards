@@ -15,12 +15,12 @@
         data-aos-easing="ease-in"
         class="mx-auto my-auto scrollable col-sm-9 col-xs-12"
     >
-      <h4>
+      <h6>
         We now encourage you to take a moment to reflect on the topic. <br />
          Why do you think your choices matched or differed from the correlations measured in the survey?<br />
          How might such data be useful for policymakers or the general public?<br />
          What are other factors that make you happy and do you actively incorporate them in your daily life?<br />
-      </h4>
+      </h6>
     </div>
   </div>
 
@@ -40,7 +40,7 @@
       data-aos-easing="ease-in"
       class="mx-auto my-auto scrollable col-sm-9 col-xs-12"
     >
-      <h5>
+      <h6>
         The dataset used in this visualization was collected in the 10th
         European Social Survey (ESS) in 2022. ESS is a biennial survey of
         Europeans and the chosen dataset contains responses from over 33352
@@ -66,7 +66,7 @@
           href="https://ess-search.nsd.no/en/study/172ac431-2a06-41df-9dab-c1fd8f3877e7"
           >https://ess-search.nsd.no/en/study/172ac431-2a06-41df-9dab-c1fd8f3877e7</a
         >
-      </h5>
+      </h6>
     </div>
   </div>
 </template>
