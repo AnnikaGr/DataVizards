@@ -8,11 +8,18 @@
               Which are the 5 factors that you think related most to
               happiness?<br /><br />
             </h1>
+            <img
+                src="../assets/happy.gif"
+                class="img-fluid rounded mx-auto d-block p-5"
+                style="max-width: 80%"
+                alt="happy"
+            />
+
             <button
-              type="button"
-              @click="handleSubmit"
-              class="btn btn-lg custom-btn mx-auto"
-              style="max-width: 30%"
+                type="button"
+                @click="handleSubmit"
+                class="btn btn-lg custom-btn mx-auto"
+                style="max-width: 30%"
             >
               Submit
             </button>
