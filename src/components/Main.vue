@@ -5,7 +5,8 @@
       @valuePass="valueUpdate"
       class="large-page row"
     ></PageQuestion>
-    <PageVisualisation class="page row"></PageVisualisation>
+    <PageVisualisation class="page row" :selection="updatedValue"></PageVisualisation>
+    <PageCompare class="page row" :selection="updatedValue"></PageCompare>
   </div>
 </template>
 
@@ -14,13 +15,14 @@ import ScrollReveal from "scrollreveal";
 import PageVisualisation from "@/components/PageVisualisation.vue";
 import PageQuestion from "@/components/PageQuestion.vue";
 import PageIntro from "@/components/PageIntro.vue";
+import PageCompare from "@/components/PageCompare.vue";
 import {loadScript} from "vue-plugin-load-script";
 import AOS from "aos";
 import "aos/dist/aos.css";
 loadScript("https://unpkg.com/aos@2.3.1/dist/aos.js");
 export default {
   name: "MainRight",
-  components: {PageIntro, PageQuestion, PageVisualisation },
+  components: {PageCompare, PageIntro, PageQuestion, PageVisualisation },
   data() {
     return {
       currStep: null,
