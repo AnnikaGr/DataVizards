@@ -10,7 +10,7 @@
           <div v-for="(item, index) in top_five_strings" :key="item">
             <button
               type="button"
-              class="btn btn-light"
+              class="btn btn-light bg-transparent "
               data-bs-toggle="modal"
               :data-bs-target="`#exampleModal`"
               @click="buttonPressed(index)"
@@ -61,6 +61,8 @@
       id="my_dataviz"
       class="my-auto scrollable col-sm-8 col-xs-12"
     ></div>
+    <div class="sticky-bottom text-center">  <a href="#about" class="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
+    </div>
   </div>
 </template>
 
@@ -108,7 +110,7 @@ export default {
     data.forEach((pair) => retrieved_values.push(parseFloat(pair.values)));
 
     let retrieved_labels = [];
-    data.forEach((pair) => retrieved_labels.push(pair.question));
+    data.forEach((pair) => retrieved_labels.push(pair.labels));
 
     var options = {
       series: retrieved_values,

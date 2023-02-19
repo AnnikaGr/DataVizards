@@ -1,11 +1,12 @@
 <template>
-  <div class="container-fluid mx-auto">
+  <div class="container p-5 mx-auto mx-auto">
     <PageIntro class="page row"></PageIntro>
     <PageQuestion
       @valuePass="valueUpdate"
       class="large-page row"
     ></PageQuestion>
     <PageVisualisation class="page row"></PageVisualisation>
+    <PageAbout></PageAbout>
   </div>
 </template>
 
@@ -17,10 +18,11 @@ import PageIntro from "@/components/PageIntro.vue";
 import {loadScript} from "vue-plugin-load-script";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import PageAbout from "@/components/PageAbout.vue";
 loadScript("https://unpkg.com/aos@2.3.1/dist/aos.js");
 export default {
   name: "MainRight",
-  components: {PageIntro, PageQuestion, PageVisualisation },
+  components: {PageAbout, PageIntro, PageQuestion, PageVisualisation },
   data() {
     return {
       currStep: null,
@@ -59,7 +61,7 @@ ScrollReveal().reveal(".scrollable", {
   min-width: 80vw;
 }
 .large-page {
-  height: 150vh;
+  height: 200vh;
   min-width: 80vw;
 }
 .head {

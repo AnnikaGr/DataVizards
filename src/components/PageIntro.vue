@@ -1,11 +1,16 @@
 <template>
   <div class="page row">
-    <h3 data-aos="fade-down" data-aos-easing="ease-in"  class="head scrollable col-sm-6 col-xs-12">
-      Happiness is a feeling of contentment, satisfaction, and pleasure. Happy
-      individuals are more likely to be productive, have better mental and
-      physical health, which can lead to overall well-being for society as a
-      whole and increased economic prosperity.
-    </h3>
+
+      <div data-aos="fade-down" data-aos-easing="ease-in"  class="head scrollable col-sm-6 col-xs-12">
+        <div class="row">
+          <h2 class="display-3"><b>Correlations with Happiness</b><br><br></h2>
+        <h5 class="lh-base">Happiness is a feeling of contentment, satisfaction, and pleasure. Happy
+        individuals are more likely to be productive, have better mental and
+        physical health, which can lead to overall well-being for society as a
+          whole and increased economic prosperity.</h5>
+        </div> </div>
+
+
 
     <div data-aos="fade-down" data-aos-easing="ease-in" class="mx-auto my-auto scrollable col-sm-6 col-xs-12">
       <img
@@ -14,7 +19,7 @@
         alt="happy"
       />
     </div>
-    <div class="sticky-bottom">  <a href="#question" class="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
+    <div class="sticky-bottom text-center"> Scroll down to reflect on the topic and learn more about which factors are correlated with people's happiness. <a href="#question" class="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
     </div>
   </div>
 </template>
