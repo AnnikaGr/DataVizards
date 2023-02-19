@@ -61,14 +61,6 @@
       id="my_dataviz"
       class="my-auto scrollable col-sm-8 col-xs-12"
     ></div>
-    <div class="sticky-bottom">
-      <a
-        href="#compare"
-        class="ca3-scroll-down-link ca3-scroll-down-arrow"
-        data-ca3_iconfont="ETmodules"
-        data-ca3_icon=""
-      ></a>
-    </div>
   </div>
 </template>
 
