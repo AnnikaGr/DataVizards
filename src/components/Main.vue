@@ -2,7 +2,7 @@
   <div class="container-fluid mx-auto">
 
     <PageIntro class="page row"></PageIntro>
-    <PageQuestion data-aos="fade-down" data-aos-easing="ease-in"
+    <PageQuestion
       @valuePass="valueUpdate"
       class="large-page row"
     ></PageQuestion>

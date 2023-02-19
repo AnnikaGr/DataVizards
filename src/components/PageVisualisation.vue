@@ -1,6 +1,6 @@
 <template>
   <div class="row scrollable" id="vis">
-    <div data-aos="fade-down" data-aos-easing="ease-in" class="head scrollable col-sm-4 col-xs-12">
+    <div class="head scrollable col-sm-4 col-xs-12">
       <div class="row">
         <h4>
           In 2022, 33352 Europeans were questioned about various factors. This
