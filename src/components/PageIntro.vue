@@ -4,10 +4,8 @@
       <div data-aos="fade-down" data-aos-easing="ease-in"  class="head scrollable col-sm-5 col-xs-12">
         <div class="row">
           <h2 class="display-1"><b>Correlations with Happiness</b><br><br></h2>
-        <h5 class="lh-base">Happiness is a feeling of contentment, satisfaction, and pleasure. Happy
-        individuals are more likely to be productive, have better mental and
-        physical health, which can lead to overall well-being for society as a
-          whole and increased economic prosperity.</h5>
+        <h5 class="lh-base"> Feeling happiness is one of the major goals for many of us in life.
+          By understanding the factors that are most strongly associated with happiness, we can make informed decisions about how to promote well-being, and we can better appreciate the complex interplay of factors that contribute to our subjective well-being. Learning more about correlations with happiness can help us to make the most of our lives and to build better, more fulfilling communities for everyone. </h5>
         </div> </div>
 
 
