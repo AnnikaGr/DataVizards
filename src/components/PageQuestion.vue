@@ -41,7 +41,7 @@
 <script>
 import { csv } from "d3-fetch";
 
-const dataSrc = new URL(`@/datasets/labels_list.csv`, import.meta.url).href;
+const dataSrc = new URL(`@/datasets/ESS10-happy-allCorr-bigger-02.csv`, import.meta.url).href;
 function fetchData() {
   return csv(dataSrc).then((data) => data);
 }

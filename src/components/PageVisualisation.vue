@@ -72,7 +72,7 @@ import ApexCharts from "apexcharts";
 import { csv } from "d3-fetch";
 
 
-const dataSrc = new URL(`@/datasets/labels_list.csv`, import.meta.url).href;
+const dataSrc = new URL(`@/datasets/ESS10-happy-allCorr-bigger-02.csv`, import.meta.url).href;
 function fetchData() {
   return csv(dataSrc).then((data) => data);
 }
@@ -80,6 +80,7 @@ function fetchData() {
 export default {
   name: "PageVisualisation",
   components: { PageStflife },
+  props: ["selection"],
   async mounted() {
     let data = await fetchData();
 
@@ -87,7 +88,7 @@ export default {
     data.forEach((pair) => retrieved_values.push(parseFloat(pair.values)));
 
     let retrieved_labels = [];
-    data.forEach((pair) => retrieved_labels.push(pair.labels));
+    data.forEach((pair) => retrieved_labels.push(pair.question));
 
     var options = {
       series: retrieved_values,
