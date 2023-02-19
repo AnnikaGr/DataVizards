@@ -83,11 +83,6 @@ function fetchData() {
 export default {
   name: "PageVisualisation",
   components: { PageOneFactor },
-  methods: {
-    buttonPressed(index) {
-      this.factorIndex = index;
-    },
-  },
   data() {
     return {
       factorIndex: 0,
@@ -102,6 +97,9 @@ export default {
   },
   props: ["selection"],
   methods: {
+    buttonPressed(index) {
+      this.factorIndex = index;
+    },
       async initChart(){
         document.querySelector("#my_dataviz").innerHTML = "";
         console.log("mounted called")
@@ -126,7 +124,7 @@ export default {
           },
           colors: [
             function ({ value,seriesIndex }) {
-              if (seriesIndex in selected_indeces){
+              if (selected_indeces.includes(seriesIndex)){
                 return "#ff7e7e";
               }
               else if (value < 0.22) {
