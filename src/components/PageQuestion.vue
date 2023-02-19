@@ -11,7 +11,7 @@
             <button
               type="button"
               @click="handleSubmit"
-              class="btn btn-lg btn-dark mx-auto"
+              class="btn btn-lg custom-btn mx-auto"
               style="max-width: 30%"
             >
               Submit
@@ -92,7 +92,7 @@ export default {
 
 <style scoped>
 .form-check-input:checked {
-  background-color: green !important;
+  background-color: lightskyblue !important;
   border: 0;
 }
 .form-check-input:focus,
@@ -104,5 +104,9 @@ label.form-check-label:focus,
   outline: 0;
   border: 0;
   box-shadow: 0 0 0 0.1rem black !important;
+}
+.custom-btn{
+  background-color: lightskyblue !important;
+  color: white !important;
 }
 </style>

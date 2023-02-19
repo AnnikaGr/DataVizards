@@ -128,25 +128,34 @@ export default {
 
       console.log("selected indices" + selected_indeces);
 
-      var options = {
-        series: retrieved_values,
-        labels: retrieved_labels,
-        chart: {
-          type: "polarArea",
-        },
-        colors: [
-          function ({ value, seriesIndex }) {
-            if (selected_indeces.includes(seriesIndex)) {
-              return "#ff7e7e";
-            } else if (value < 0.22) {
-              return "#fdefb1";
-            } else if (value < 0.3) {
-              return "#fec44f";
-            } else {
-              return "#ea7531";
-            }
+
+        var options = {
+          series: retrieved_values,
+          labels: retrieved_labels,
+          chart: {
+            type: "polarArea",
           },
-        ],
+          colors: [
+            function ({ value,seriesIndex }) {
+              if (selected_indeces.includes(seriesIndex)){
+                return "#87CEFAFF";
+              }
+              else if (value < 0.22) {
+                return "#fdefb1";
+              } else if (value < 0.3) {
+                return "#fec44f";
+              } else {
+                return "#ea7531";
+              }
+            },
+          ],
+          yaxis: {
+            show: true,
+            max: 1, // the lowest value that can be set is 1
+            tickAmount: 4,
+
+          },
+        
         yaxis: {
           show: true,
           max: 1, // the lowest value that can be set is 1
