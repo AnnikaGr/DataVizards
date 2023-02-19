@@ -10,7 +10,7 @@
           <div v-for="(item, index) in top_five_strings" :key="item">
             <button
               type="button"
-              class="btn btn-primary"
+              class="btn btn-light"
               data-bs-toggle="modal"
               :data-bs-target="`#exampleModal`"
               @click="buttonPressed(index)"
@@ -79,16 +79,17 @@ import ApexCharts from "apexcharts";
 import PageOneFactor from "./PageOneFactor.vue";
 import { csv } from "d3-fetch";
 
-
-
-const dataSrc = new URL(`@/datasets/ESS10-happy-allCorr-bigger-02.csv`, import.meta.url).href;
+const dataSrc = new URL(
+  `@/datasets/ESS10-happy-allCorr-bigger-02.csv`,
+  import.meta.url
+).href;
 function fetchData() {
   return csv(dataSrc).then((data) => data);
 }
 
 export default {
   name: "PageVisualisation",
-  components: {PageOneFactor },
+  components: { PageOneFactor },
   methods: {
     buttonPressed(index) {
       this.factorIndex = index;
@@ -98,11 +99,11 @@ export default {
     return {
       factorIndex: 0,
       top_five_strings: [
-        "Life satisfaction level",
+        "General life satisfaction",
         "Feeling about household income",
-        "Economy satisfaction level",
-        "Education satisfaction level",
-        "Health service satisfaction level",
+        "Satisfaction with country's economy",
+        "Satisfaction with country's education",
+        "Satisfaction with country's health services",
       ],
     };
   },
