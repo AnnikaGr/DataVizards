@@ -6,7 +6,7 @@
         class="head scrollable col-sm-3 col-xs-12"
     >
       <div class="row">
-        <h1 class="display-1"><b>Reflection</b><br /><br /></h1>
+        
       </div>
     </div>
 
