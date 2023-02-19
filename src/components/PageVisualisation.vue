@@ -127,7 +127,7 @@ export default {
           colors: [
             function ({ value,seriesIndex }) {
               if (selected_indeces.includes(seriesIndex)){
-                return "#ff7e7e";
+                return "#87CEFAFF";
               }
               else if (value < 0.22) {
                 return "#fdefb1";
