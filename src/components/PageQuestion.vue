@@ -1,8 +1,8 @@
 <template>
-  <div class="row scrollable" id="question">
+  <div class="row" id="question">
     <form class="my-auto">
       <div class="my-auto row">
-        <div class="head scrollable col-sm-6 col-xs-12" data-aos="fade-down" data-aos-easing="ease-in">
+        <div class="head col-sm-6 col-xs-12" data-aos="fade-down" data-aos-easing="ease-in">
           <div class="row">
             <h1>
               Which are the 5 factors that you think related most to
@@ -26,7 +26,7 @@
           </div>
         </div>
 
-        <div class="my-auto scrollable col-sm-6 col-xs-12" data-aos="fade-down" data-aos-easing="ease-in">
+        <div class="my-auto col-sm-6 col-xs-12" data-aos="fade-down" data-aos-easing="ease-in">
           <div v-for="item in items" :key="item" class="form-check">
             <input
               class="form-check-input"

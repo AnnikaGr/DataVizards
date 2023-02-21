@@ -3,7 +3,7 @@
     <div
         data-aos="fade-down"
         data-aos-easing="ease-in"
-        class="head scrollable col-sm-3 col-xs-12"
+        class="head col-sm-3 col-xs-12"
     >
       <div class="row">
         
@@ -13,7 +13,7 @@
     <div
         data-aos="fade-down"
         data-aos-easing="ease-in"
-        class="mx-auto my-auto scrollable col-sm-9 col-xs-12"
+        class="mx-auto my-auto col-sm-9 col-xs-12"
     >
       <h6>
         We now encourage you to take a moment to reflect on the topic. <br />
@@ -28,7 +28,7 @@
     <div
       data-aos="fade-down"
       data-aos-easing="ease-in"
-      class="head scrollable col-sm-3 col-xs-12"
+      class="head col-sm-3 col-xs-12"
     >
       <div class="row">
         <h1 class="display-1"><b>About the data</b><br /><br /></h1>
@@ -38,7 +38,7 @@
     <div
       data-aos="fade-down"
       data-aos-easing="ease-in"
-      class="mx-auto my-auto scrollable col-sm-9 col-xs-12"
+      class="mx-auto my-auto col-sm-9 col-xs-12"
     >
       <h6>
         The dataset used in this visualization was collected in the 10th

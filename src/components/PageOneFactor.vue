@@ -1,6 +1,6 @@
 <template>
-  <div class="row scrollable">
-    <div class="head scrollable col-sm-5 col-xs-12">
+  <div class="row">
+    <div class="head col-sm-5 col-xs-12">
       <div class="row">
         <h3>
           {{ top_five_statements[this.$.vnode.key] }}
@@ -9,7 +9,7 @@
     </div>
     <div
       :id="top_five_codes[this.$.vnode.key]"
-      class="my-auto scrollable col-sm-7 col-xs-12"
+      class="my-auto col-sm-7 col-xs-12"
     ></div>
   </div>
 </template>

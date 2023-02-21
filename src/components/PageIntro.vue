@@ -1,7 +1,7 @@
 <template>
   <div class="page row">
 
-      <div data-aos="fade-down" data-aos-easing="ease-in"  class="head scrollable col-sm-5 col-xs-12">
+      <div data-aos="fade-down" data-aos-easing="ease-in"  class="head col-sm-5 col-xs-12">
         <div class="row">
           <h2 class="display-1"><b>Correlations with Happiness</b><br><br></h2>
         <h6 class="lh-base"> Feeling happiness is one of the major goals for many of us in life.
@@ -10,7 +10,7 @@
 
 
 
-    <div data-aos="fade-down" data-aos-easing="ease-in" class="mx-auto my-auto scrollable col-sm-7 col-xs-12">
+    <div data-aos="fade-down" data-aos-easing="ease-in" class="mx-auto my-auto col-sm-7 col-xs-12">
       <img
         src="../assets/happyintro.jpg"
         class="img-fluid rounded mx-auto d-block"

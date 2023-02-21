@@ -12,11 +12,9 @@
 </template>
 
 <script>
-import ScrollReveal from "scrollreveal";
 import PageVisualisation from "@/components/PageVisualisation.vue";
 import PageQuestion from "@/components/PageQuestion.vue";
 import PageIntro from "@/components/PageIntro.vue";
-import PageCompare from "@/components/PageCompare.vue";
 import {loadScript} from "vue-plugin-load-script";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -51,11 +49,6 @@ export default {
   },
 };
 
-ScrollReveal().reveal(".scrollable", {
-  delay: 800,
-  duration: 500,
-  reset: true,
-});
 </script>
 
 <style>

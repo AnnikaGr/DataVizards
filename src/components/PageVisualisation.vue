@@ -1,6 +1,6 @@
 <template>
-  <div class="row scrollable" id="vis">
-    <div class="head scrollable col-sm-4 col-xs-12">
+  <div class="row" id="vis">
+    <div class="head col-sm-4 col-xs-12">
       <div class="row">
         <h5 class="fs-6">
           In 2020, 33352 Europeans were questioned about various aspects of
@@ -73,7 +73,7 @@
       data-aos="fade-down"
       data-aos-easing="ease-in"
       id="my_dataviz"
-      class="my-auto scrollable col-sm-8 col-xs-12"
+      class="my-auto col-sm-8 col-xs-12"
     ></div>
     <div class="sticky-bottom text-center">
       <a
@@ -87,8 +87,6 @@
 </template>
 
 <script>
-import * as d3 from "d3";
-import { loadScript } from "vue-plugin-load-script";
 import ApexCharts from "apexcharts";
 import PageOneFactor from "./PageOneFactor.vue";
 import { csv } from "d3-fetch";
@@ -234,10 +232,7 @@ export default {
   },
 };
 
-import ScrollReveal from "scrollreveal";
-loadScript("https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js");
-ScrollReveal().reveal(".form", { delay: 5000 });
-ScrollReveal().reveal("#my_dataviz", { delay: 10000 });
+
 </script>
 <style scoped>
 .btn-custom {

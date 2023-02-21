@@ -3,7 +3,7 @@
     <div
         data-aos="fade-down"
         data-aos-easing="ease-in"
-        class="head scrollable col-sm-5 col-xs-12"
+        class="head col-sm-5 col-xs-12"
     >
       <div class="row">
         <h1 class="display-3"><b>About the visualizations</b><br /><br /></h1>
@@ -13,7 +13,7 @@
     <div
         data-aos="fade-down"
         data-aos-easing="ease-in"
-        class="mx-auto my-auto scrollable col-sm-7 col-xs-12"
+        class="mx-auto my-auto col-sm-7 col-xs-12"
     >
       <h6>
         WHAT the visualizations show: The visualizations show correlations between various factors and the corresponding people's answers about their happiness levels, for cases where the correlations were stronger than 0.2.  They are visualized in a polar area chart resembling a sun and sorted clockwise based on correlation strength. On demand, users can also see line charts for the factors with the strongest correlations to happiness.
