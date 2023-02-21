@@ -43,7 +43,7 @@ export default {
         "Average of how satisfied people are with country's health services (0-10)",
       ],
       top_five_statements: [
-        "Happiness positively correlates with life as a whole.",
+        "Happiness positively correlates with life satisfaction.",
         "Happiness positively correlates with lower stress about people's household income.",
         "Happiness positively correlates with country's economy.",
         "Happiness positively correlates with country's education.",

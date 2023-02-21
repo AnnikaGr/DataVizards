@@ -59,6 +59,14 @@
           A bigger sunray represents a stronger correlation. Hover over the
           sunray to read the exact correlation value and name of factors.
         </p>
+        <div>
+
+          <div><span class="dot legend4"></span><span class="text-legend"> your selected factors</span></div>
+          <div><span class="dot legend3"></span><span class="text-legend"> correlation of 0.3 or greater </span></div>
+          <div><span class="dot legend2"></span><span class="text-legend"> correlation between 0.22 and 0.3</span></div>
+          <div><span class="dot legend1"></span><span class="text-legend"> correlation smaller 0.22</span></div>
+
+        </div>
       </div>
     </div>
     <div
@@ -160,6 +168,12 @@ export default {
 
         legend: {
           show: false,
+          floating: true,
+          customLegendItems: ["correlation smaller 0.22", "correlation between 0.22 and 0.3", "correlation 0.3 or greater", "your selected factors"],
+          labels: {
+            colors: ["#fdefb1", "#fec44f", "#ea7531", "#87CEFAFF"],
+            useSeriesColors: false
+          },
         },
         stroke: {
           colors: ["#fff"],
@@ -228,5 +242,29 @@ ScrollReveal().reveal("#my_dataviz", { delay: 10000 });
 <style scoped>
 .btn-custom {
   border-color: #ea7531;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  display: inline-block;
+
+}
+.text-legend{
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.legend1{
+background-color: #fdefb1
+}
+.legend2{
+  background-color: #fec44f
+}
+.legend3{
+  background-color: #ea7531
+}
+.legend4{
+  background-color: #87CEFAFF
 }
 </style>
