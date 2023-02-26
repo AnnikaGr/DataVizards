@@ -27,6 +27,8 @@ export default {
 
   data() {
     return {
+      mins:[0,1,0,0,0],
+      maxs:[10,4,10,10,10],
       top_five_attributes: [
         "Life satisfaction (0-10)",
         "Stress about household income (1-4)",
@@ -45,9 +47,9 @@ export default {
       top_five_statements: [
         "Happiness positively correlates with life satisfaction.",
         "Happiness positively correlates with lower stress about people's household income.",
-        "Happiness positively correlates with country's economy.",
-        "Happiness positively correlates with country's education.",
-        "Happiness positively correlates with country's health services.",
+        "Happiness positively correlates with people's satisfaction in country's economy.",
+        "Happiness positively correlates with people's satisfaction in country's education.",
+        "Happiness positively correlates with people's satisfaction in country's health services.",
       ],
     };
   },
@@ -105,8 +107,9 @@ export default {
         offsetY: 0,
       },
       yaxis: {
-        min: 0.0,
-        decimalsInFloat: 3,
+        min: this.mins[this.$.vnode.key],
+        max: this.maxs[this.$.vnode.key],
+        decimalsInFloat: 1,
       },
     };
 
