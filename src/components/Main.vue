@@ -5,7 +5,7 @@
       @valuePass="valueUpdate"
       class="large-page row"
     ></PageQuestion>
-    <PageVisualisation class="page row" :selection="updatedValue"></PageVisualisation>
+    <PageVisualisation class="slightly-large-page row" :selection="updatedValue"></PageVisualisation>
     <PageAbout></PageAbout>
     <PageAudience></PageAudience>
   </div>
@@ -57,7 +57,11 @@ export default {
   min-width: 80vw;
 }
 .large-page {
-  height: 170vh;
+  height: 180vh;
+  min-width: 80vw;
+}
+.slightly-large-page {
+  height: 120vh;
   min-width: 80vw;
 }
 .head {

@@ -2,6 +2,7 @@
   <div class="row" id="vis">
     <div class="head col-sm-4 col-xs-12">
       <div class="row">
+        <h2>About this visualization</h2>
         <h5 class="fs-6">
           In 2020, 33352 Europeans were questioned about various aspects of
           their lives. Here you can see the correlations (0-1) of people’s
@@ -11,7 +12,8 @@
           rating of the factor, but there might also be no causation at all.
 
           <br />
-          <br />Explore the top 5 factors correlating with happiness : <br />
+          <br />Explore the top 5 factors correlating with happiness by clicking
+          on the terms below: <br />
           <br />
           <div v-for="(item, index) in top_five_strings" :key="item">
             <button
@@ -54,18 +56,29 @@
           </div>
         </div>
 
-        <p>
+        <p class="small">
           <br />
           A bigger sunray represents a stronger correlation. Hover over the
-          sunray to read the exact correlation value and name of factors.
+          sunray to read the exact correlation value and name of factors. The
+          colours in the visualization represent the following:
         </p>
-        <div>
-
-          <div><span class="dot legend4"></span><span class="text-legend"> your selected factors</span></div>
-          <div><span class="dot legend3"></span><span class="text-legend"> correlation of 0.3 or greater </span></div>
-          <div><span class="dot legend2"></span><span class="text-legend"> correlation between 0.22 and 0.3</span></div>
-          <div><span class="dot legend1"></span><span class="text-legend"> correlation smaller 0.22</span></div>
-
+        <div class="small">
+          <div>
+            <span class="dot legend4"></span
+            ><span class="text-legend"> your selected factors</span>
+          </div>
+          <div>
+            <span class="dot legend3"></span
+            ><span class="text-legend"> correlation of 0.3 or greater </span>
+          </div>
+          <div>
+            <span class="dot legend2"></span
+            ><span class="text-legend"> correlation between 0.22 and 0.3</span>
+          </div>
+          <div>
+            <span class="dot legend1"></span
+            ><span class="text-legend"> correlation smaller 0.22</span>
+          </div>
         </div>
       </div>
     </div>
@@ -167,10 +180,15 @@ export default {
         legend: {
           show: false,
           floating: true,
-          customLegendItems: ["correlation smaller 0.22", "correlation between 0.22 and 0.3", "correlation 0.3 or greater", "your selected factors"],
+          customLegendItems: [
+            "correlation smaller 0.22",
+            "correlation between 0.22 and 0.3",
+            "correlation 0.3 or greater",
+            "your selected factors",
+          ],
           labels: {
             colors: ["#fdefb1", "#fec44f", "#ea7531", "#87CEFAFF"],
-            useSeriesColors: false
+            useSeriesColors: false,
           },
         },
         stroke: {
@@ -231,8 +249,6 @@ export default {
     this.initChart();
   },
 };
-
-
 </script>
 <style scoped>
 .btn-custom {
@@ -243,23 +259,22 @@ export default {
   width: 15px;
   border-radius: 50%;
   display: inline-block;
-
 }
-.text-legend{
+.text-legend {
   display: inline-block;
   padding-left: 10px;
 }
 
-.legend1{
-background-color: #fdefb1
+.legend1 {
+  background-color: #fdefb1;
 }
-.legend2{
-  background-color: #fec44f
+.legend2 {
+  background-color: #fec44f;
 }
-.legend3{
-  background-color: #ea7531
+.legend3 {
+  background-color: #ea7531;
 }
-.legend4{
-  background-color: #87CEFAFF
+.legend4 {
+  background-color: #87cefaff;
 }
 </style>
